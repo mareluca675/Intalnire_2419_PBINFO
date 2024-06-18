@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+    int x1, x2;
+    std::cin >> x1 >> x2;
+    
+    if(x1 > x2)
+        std::swap(x1, x2);
+    
+    int punctMedian = (x1 + x2) / 2;
+    
+    std::cout << (punctMedian - x1) * (punctMedian - x1 + 1) / 2 + (x2 - punctMedian) * (x2 - punctMedian + 1) / 2;
+    
+    return 0;
+}
